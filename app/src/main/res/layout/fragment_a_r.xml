@@ -1,0 +1,53 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/arFragment"
+        android:transitionName="ar_view"
+        android:name="com.google.ar.sceneform.ux.ArFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/searching"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/searching"
+        />
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_15ssp"
+        android:background="@drawable/button_background"
+        android:contentDescription="@string/back"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/baseline_arrow_back_24"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/photoStories"
+        android:textStyle="bold"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/_10sdp"
+        android:fontFamily="@font/ananda"
+        android:textSize="@dimen/_18ssp"
+        android:alpha="0.7"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        />
+
+
+</FrameLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:elevation="0dp"
+    app:cardCornerRadius="@dimen/_20sdp"
+    android:backgroundTint="@color/white"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/join_our_waitlist"
+        android:textSize="@dimen/_20ssp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/darkGrey"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textAlignment="center"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oops! It looks like you've reached the maximum number of images you can upload.\nBy joining our waitlist, you'll be among the first to know about exciting updates, early access to new features."
+            android:textSize="@dimen/_15ssp"
+            android:textColor="#656565"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            />
+
+        <Button
+            android:id="@+id/joinWaitList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/join_waitlist"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15ssp"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/darkGrey"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

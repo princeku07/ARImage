@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.home.HomeFragment"
+    android:background="@color/background"
+    android:orientation="vertical"
+    >
+
+
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recylerView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/_75sdp"
+       android:orientation="vertical"
+       tools:listitem="@layout/image_layout"
+       android:layout_marginHorizontal="@dimen/_10sdp"
+       app:spanCount="2"
+       app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+      />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/photoStories"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/ananda"
+                    android:textSize="@dimen/_18ssp"
+                    android:textColor="@color/darkGrey"
+                    />
+            </androidx.appcompat.widget.Toolbar>
+            <ImageView
+                android:id="@+id/support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_support_agent_24"
+                android:contentDescription="@string/support"
+                android:layout_gravity="center|end"
+                android:backgroundTint="@color/darkGrey"
+                android:layout_margin="@dimen/_10sdp"/>
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="@drawable/image_gradient_overlay"
+        />
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:textSize="@dimen/_15ssp"
+        android:text="@string/upload"
+        android:textColor="@color/darkGrey"
+        android:elevation="@dimen/_20sdp"
+        android:backgroundTint="@color/yellow"/>
+
+</FrameLayout>

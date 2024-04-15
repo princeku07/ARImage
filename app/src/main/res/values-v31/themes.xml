@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.ARImage" parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ps_logo_light</item>p
+        <item name="android:windowSplashScreenBackground">@color/yellow</item>
+    </style>
+</resources>

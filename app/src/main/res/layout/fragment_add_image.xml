@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.upload.AddImageFragment"
+    android:background="@color/background"
+    android:paddingTop="@dimen/_25sdp">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/button_background"
+            android:contentDescription="@string/back"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/darkGrey" />
+
+        <TextView
+            android:id="@+id/remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="7"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="normal"
+            app:drawableLeftCompat="@drawable/photos" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_276sdp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/black"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.318">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/upload_anim"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            app:lottie_loop="true"
+            android:adjustViewBounds="true"
+            app:lottie_rawRes="@raw/add_image" />
+       <FrameLayout
+           android:layout_width="wrap_content"
+           android:layout_height="@dimen/_276sdp"
+           app:cardCornerRadius="@dimen/_3sdp"
+           android:paddingStart="@dimen/_3sdp"
+           android:paddingEnd="@dimen/_3sdp"
+           android:paddingTop="@dimen/_5sdp"
+           android:paddingBottom="@dimen/_16sdp"
+           android:layout_marginHorizontal="@dimen/_27sdp"
+           android:layout_gravity="center"
+           android:animateLayoutChanges="true"
+           android:background="@drawable/image_background">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/default_image"
+            android:layout_gravity="bottom|center"
+            android:adjustViewBounds="true"
+            android:clickable="false"
+            android:contentDescription="@string/uploaded_image"
+           />
+
+       </FrameLayout>
+        <View
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/black_overlay"
+            android:visibility="gone"
+            android:adjustViewBounds = 'true'
+            />
+
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/scanning"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/scanning" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/videoPreview"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:contentDescription="@string/uploaded_image"
+            android:adjustViewBounds="true"
+            app:shapeAppearance="@style/roundImageView" />
+
+        <TextView
+            android:id="@+id/videoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_video"
+            android:textStyle="bold|italic"
+            android:textColor="#717171"
+            android:textSize="@dimen/_15ssp" />
+
+        <ImageButton
+            android:id="@+id/video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@drawable/button_background"
+            android:contentDescription="@string/back"
+            android:elevation="@dimen/_3sdp"
+            android:padding="@dimen/_7sdp"
+            android:src="@drawable/baseline_play_arrow_24"
+            app:tint="@color/button_text_colors" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginHorizontal="@dimen/_35sdp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/button_state_colors"
+        android:drawableEnd="@drawable/baseline_auto_fix_high_24"
+        android:drawableTint="@color/button_text_colors"
+        android:enabled="false"
+        android:paddingVertical="@dimen/_8sdp"
+        android:text="@string/save"
+        android:elevation="@dimen/_10sdp"
+        android:textColor="@color/button_text_colors"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.85" />
+    <!--        android:backgroundTint="#0094FF"-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

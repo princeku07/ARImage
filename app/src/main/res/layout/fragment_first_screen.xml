@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.onBoarding.screens.FirstScreen">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_250sdp"
+            android:src="@drawable/welocome"
+            android:layout_gravity="center"
+            android:contentDescription="welcome" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Your"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/white"
+        android:textAlignment="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photo Stories"
+            android:textSize="@dimen/_25ssp"
+            android:textColor="@color/yellow"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:fontFamily="@font/ananda"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:paddingVertical="@dimen/_20sdp"
+            android:lineHeight="@dimen/_15sdp"
+            android:textSize="@dimen/_12ssp"
+            android:text="Experience the magic of augmented images as your memories come to life with a simple scan in just two steps."
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/_15sdp"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/darkGrey"
+        android:text="@string/next"/>
+
+</FrameLayout>

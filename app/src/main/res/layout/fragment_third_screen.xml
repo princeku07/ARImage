@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.onBoarding.screens.ThirdScreen">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="@dimen/_310sdp"
+            android:layout_height="@dimen/_350sdp"
+            android:layout_gravity="center">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/video"
+            android:adjustViewBounds="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/video_lottie"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/image_gradient_overlay"
+                />
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Just Scan"
+            android:textStyle="bold|italic"
+            android:textSize="@dimen/_25ssp"
+            android:textColor="@color/yellow"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:lineHeight="@dimen/_15sdp"
+            android:textSize="@dimen/_12ssp"
+            android:text="Simply scan the image you've added"
+            />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginHorizontal="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/darkGrey"
+        android:text="@string/finish"/>
+
+</FrameLayout>

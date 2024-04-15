@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ARImage" parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Theme.ARImage" parent="Base.Theme.ARImage" />
+    <style name="roundImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_15sdp</item>
+    </style>
+</resources>

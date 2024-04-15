@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Photo Stories</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save">Save</string>
+    <string name="add_video">Add Video</string>
+    <string name="uploaded_image">uploaded image</string>
+    <string name="back">back</string>
+    <string name="edit_video">Choose another video</string>
+    <string name="support">support</string>
+    <string name="photoStories">PhotoStories</string>
+    <string name="upload">Upload</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete Image</string>
+    <string name="join_our_waitlist">Join Our Waitlist</string>
+    <string name="join_waitlist">Join Waitlist</string>
+    <string name="water_mark">water mark</string>
+    <string name="finish">Finish</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="pic">pic</string>
+</resources>

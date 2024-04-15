@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/boardingFragment">
+    <fragment
+        android:id="@+id/addImageFragment2"
+        android:name="com.xperiencelabs.arimage.screens.upload.AddImageFragment"
+        android:label="fragment_add_image"
+        tools:layout="@layout/fragment_add_image" >
+        <action
+            android:id="@+id/action_addImageFragment2_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <argument
+            android:name="bitmap"
+            app:argType="android.graphics.Bitmap"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/ARFragment"
+        android:name="com.xperiencelabs.arimage.screens.ARFragment"
+        android:label="ARFragment" >
+        <argument
+            android:name="data"
+            app:argType="com.xperiencelabs.arimage.domain.model.AImage"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.xperiencelabs.arimage.screens.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addImageFragment2"
+            app:destination="@id/addImageFragment2"
+            app:enterAnim="@anim/from_bottom"
+            app:popExitAnim="@anim/from_top" />
+        <action
+            android:id="@+id/action_homeFragment_to_ARFragment"
+            app:destination="@id/ARFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.xperiencelabs.arimage.screens.edit.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <argument
+            android:name="data"
+            app:argType="com.xperiencelabs.arimage.domain.model.Image"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/boardingFragment"
+        android:name="com.xperiencelabs.arimage.screens.onBoarding.BoardingFragment"
+        android:label="fragment_boarding"
+        tools:layout="@layout/fragment_boarding" >
+        <action
+            android:id="@+id/action_boardingFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/boardingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.xperiencelabs.arimage.screens.camera.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_addImageFragment2"
+            app:destination="@id/addImageFragment2"
+            app:popUpTo="@id/addImageFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
